@@ -1,54 +1,144 @@
+/* Estilo global */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
 
+/* Cabeçalho com flexbox */
 header {
-  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: #dba03f; /* Roxo */
   color: white;
-  padding: 1rem;
-  text-align: center;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
 }
 
 header h1 {
   margin: 0;
+  font-size: 2.5rem;
+}
+
+#themeSwitcher {
+  margin-top: 10px;
+  background-color: white;
+  color: #6A0DAD;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#themeSwitcher:hover {
+  background-color: #f0f0f0;
+}
+
+/* Navegação com links em linha */
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 15px;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Seções */
 section {
-  padding: 2rem;
-  margin: 1rem;
-}
-
-#sobre, #habilidades, #projetos, #contato {
-  background-color: #f4f4f4;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
   border-radius: 8px;
-  padding: 20px;
-  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+section h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #6A0DAD;
+}
+
+/* Contato */
+#contato a {
+  color: #6A0DAD;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
-  background-color: #333;
+  background-color: #6A0DAD;
   color: white;
   text-align: center;
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Tema escuro */
+.dark-theme {
+  background-color: #4B0082; /* Roxo escuro */
+  color: #FFD700; /* Amarelo claro */
+}
+
+.dark-theme header {
+  background-color: #4B0082;
+}
+
+.dark-theme section {
+  background-color: #4B0082;
+  color: #FFD700;
+}
+
+.dark-theme a {
+  color: #FFFF00; /* Amarelo mais vibrante */
+}
+
+.dark-theme a:hover {
+  text-decoration: underline;
+}
+
+.dark-theme footer {
+  background-color: #4B0082;
+  color: #FFD700;
+}
+
+.dark-theme #themeSwitcher {
+  background-color: #FFD700;
+  color: #4B0082;
+}
+
+.dark-theme #themeSwitcher:hover {
+  background-color: #FFC107;
 }
